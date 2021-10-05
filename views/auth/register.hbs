@@ -1,0 +1,72 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+
+{{>head}}
+
+<div class="container">
+    <div class="row" id="">
+        <div class="col-2" id="sidebar-index">
+            {{>sidebar}}
+        </div>
+
+        <div class="col">
+            <div class="container">
+                <div class="card card-login mx-auto text-center bg-dark">
+                    <div class="card-header mx-auto bg-dark">
+                        {{#if message}}
+                        <div class="alert {{messageClass}}" role="alert">
+                            {{message}}
+                        </div>
+                        {{/if}}
+                        <span> <img src="" class="w-75" alt="Logo">
+                        </span><br />
+
+                        <span class="logo_title">
+                            <h1>Register</h1>
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <form action="/register" method="POST">
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input type="text" name="name" class="form-control" placeholder="Name" required>
+                            </div>
+
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                </div>
+                                <input type="text" name="email" class="form-control" placeholder="Email" required>
+                            </div>
+
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" name="password" class="form-control" placeholder="Password"
+                                    required>
+                            </div>
+
+                            <div class="input-group form-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" name="confirmPassword" class="form-control"
+                                    placeholder="Confirm Password" required>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="submit" name="btn" value="Register"
+                                    class="btn btn-outline-danger float-right login_btn">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{>footer}}

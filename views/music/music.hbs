@@ -1,0 +1,64 @@
+{{>head}}
+<div class="container music">
+    <div class="row" id="">
+        <div class="col-2" id="sidebar-index">
+            {{>sidebar}}
+        </div>
+
+
+        {{!-- first row --}}
+        <div class="col-10">
+            <div class="title-app">
+                <h6>Play Your's Favorit Music</h6>
+                <h1>My Music</h1>
+            </div>
+
+
+            {{!-- <a href="/music/{{this.id}}"> --}}
+                <div class="music-list">
+                    <div class="text-start mb-2">
+                        <h5>Ini Title Music</h5>
+                        <p>Ini artis</p>
+                    </div>
+                    <span class="button-img text-end" style="display= flex;
+  justify-content=flex-end;">
+                        <div class="text-end mb-2">
+                            <a href="/music/{{this.id}}" class="btn-edit"><img src="/static/icons/play-button.svg"
+                                    alt="">
+                        </div>
+                        <div class="text-end mb-2">
+                            <a href="/music/edit/{{this.id}}" class="btn-edit"><img src="/static/icons/edit.png"
+                                    alt="edit"></a>
+                            <a href="/music/delete/{{this.id}}" class="btn-edit"><img src="/static/icons/delete.png"
+                                    alt="delete"></a>
+                        </div>
+                    </span>
+                    {{!--
+            </a> --}}
+            {{#each musics}}
+            <a href="/music/{{this.id}}">
+                <div class="music-list">
+                    <div class="text-start mb-2">
+                        <h5>{{>this.title}}</h5>
+                        <p>artis</p>
+                    </div>
+                    <span class="button-img text-end" style="display= flex;
+  justify-content=flex-end;">
+                        <a href="/#" class="btn-play"></a><img src="/static/icons/play-button.svg" alt="">
+                        <div class="text-end mb-2">
+                            <a href="/music/edit/{{this.id}}" class="btn-edit"><img src="/static/icons/edit.png"
+                                    alt="edit"></a>
+                            <a href="/music/delete/{{this.id}}" class="btn-edit"><img src="/static/icons/delete.png"
+                                    alt="delete"></a>
+                        </div>
+                    </span>
+            </a>
+            {{/each}}
+            {{!-- <a href="/#" class="btn-edit"><img src="/static/icons/edit.svg" alt="edit"></a>
+            <a href="/#" class="btn-edit"><img src="/static/icons/delete.svg" alt="delete"></a> --}}
+        </div>
+
+    </div>
+</div>
+</div>
+{{>footer}}

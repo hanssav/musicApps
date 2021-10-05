@@ -1,0 +1,78 @@
+<div class="footer">
+    <div class="row">
+        <div class="col-2">
+            {{#if isLogin}}
+            <div class="btn-group dropup">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <img src="/static/icons/artist.svg" alt="" class="img-avatar">My Account
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/music"> Music</a>
+                    <a class="dropdown-item" href="/addMusic">Add Music</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
+                </div>
+            </div>
+            {{!-- <div class="btn-group dropup">
+                <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                    aria-expanded="false">
+
+                    <img src="/static/icons/artist.svg" alt="" class="img-avatar">
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <!-- Dropdown menu links -->
+                    <div class="login">
+                        <a href="dropdown-item d-flex align-items-center">Add Music</a>
+                    </div>
+                    <span class="dropdown-divider"></span>
+                    <div class="register">
+                        <a href="">Logout</a>
+                    </div>
+                </div>
+            </div> --}}
+
+            {{else}}
+            <div class="btn-login-register">
+                <a href="/login" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Login</a>
+                <a href="/register" class="btn btn-secondary btn-lg active" role="button"
+                    aria-pressed="true">register</a>
+            </div>
+            {{/if}}
+        </div>
+
+        <div class="col-2">
+            <span class="play-button-icons">
+                <a href=""></a><img src="/static/icons/previous.svg" alt="">
+            </span>
+            <span class="play-button-icons">
+                <a href=""></a><img src="/static/icons/play-button.svg" alt="">
+            </span>
+            <span class="play-button-icons">
+                <a href=""></a><img src="/static/icons/next.svg" alt="">
+            </span>
+        </div>
+
+        <div class="col-8">
+            <div class="card-body text-center">
+
+                <h5 class="h5 font-weight-bold"><a href="#" target="_blank"></a></h5>
+                <p class="mb-0"></p>
+
+                <audio id="music" preload="true">
+                    <source src="#">
+                </audio>
+                <div id="audioplayer">
+                    <i id="pButton" class="fas fa-play"></i>
+                    <div id="timeline">
+                        <div id="playhead"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
